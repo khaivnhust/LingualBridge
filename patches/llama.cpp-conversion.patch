@@ -1,0 +1,61 @@
+diff --git a/conversion/base.py b/conversion/base.py
+index 221aa8093..4502d9143 100644
+--- a/conversion/base.py
++++ b/conversion/base.py
+@@ -1924,6 +1924,14 @@ class TextModel(ModelBase):
+         if chkhsh == "f241072145675bf8322086f115aebad05e9f869557a238bf2150a2a417d1bf60":
+             # ref: https://huggingface.co/ibm-granite/granite-embedding-97m-multilingual-r2
+             res = "granite-embed-multi-97m"
++        if chkhsh == "6a589f93b7617baf9ebec5694fa8e7cdcc78400b5485d270b6ddd0a6995b5d31":
++            # Qwen3-ASR-1.7B 4-language coverage trim (asr4/weights/
++            # qwen3-asr-1.7B-4lang-trim-coverage). pre_tokenizer / decoder /
++            # normalizer are byte-identical to stock Qwen2, but coverage pruning
++            # drops the out-of-script tokens the probe string uses (emoji, Khmer,
++            # Cyrillic, Bulgarian), so it byte-spells and the probe hash changes.
++            # Same tokenizer behaviour as qwen2.
++            res = "qwen2"
+         if chkhsh == "789696f5946cc0fc59371f39f6097cafed196b3acded6140432f26bbb1ae1669":
+             # ref: https://huggingface.co/ibm-granite/granite-embedding-311m-multilingual-r2
+             res = "granite-embed-multi-311m"
+diff --git a/conversion/qwen3vl.py b/conversion/qwen3vl.py
+index 11ce68515..95b188bf1 100644
+--- a/conversion/qwen3vl.py
++++ b/conversion/qwen3vl.py
+@@ -157,10 +157,16 @@ class Qwen3OmniMmprojModel(Qwen3VLVisionModel, Qwen25AudioModel):
+             return None
+ 
+     def get_audio_config(self) -> dict[str, Any] | None:
+-        if self.has_audio_encoder:
+-            return self.global_config["thinker_config"].get("audio_config")
+-        else:
++        if not self.has_audio_encoder:
+             return None
++        # Qwen3-Omni nests the audio config under "thinker_config", but
++        # Qwen3-ASR keeps audio_config/text_config at the top level (verified
++        # against the stock Qwen/Qwen3-ASR-1.7B-hf config), so --mmproj on
++        # Qwen3-ASR raised KeyError here. Fall back to the top level.
++        thinker = self.global_config.get("thinker_config")
++        if thinker is not None:
++            return thinker.get("audio_config")
++        return self.global_config.get("audio_config")
+ 
+     def set_gguf_parameters(self):
+         if self.has_vision_encoder:
+@@ -291,6 +297,17 @@ class Qwen3VLTextModel(Qwen3Model):
+         deepstack_layer_num = len(vision_config.get("deepstack_visual_indexes", []))
+         self.gguf_writer.add_num_deepstack_layers(deepstack_layer_num)
+ 
++        # QWEN3VL loaders -- and llama-quantize, which loads the file before
++        # quantizing -- treat rope.dimension_sections as required, but an
++        # audio-only checkpoint such as Qwen3-ASR has no rope_scaling /
++        # mrope_section to copy it from, so conversion used to produce a GGUF
++        # that could not be loaded. Qwen3-VL's own default is [16, 24, 24]
++        # (sums to head_dim/2 = 64 at head_dim 128); MRoPE is unused by the
++        # audio path, so this only needs to be present.
++        # Qwen3-VL's own default is [16, 24, 24] (sums to head_dim/2 = 64 at
++        # head_dim 128); QWEN3VL loaders require exactly 4 entries, so pad.
++        self.gguf_writer.add_rope_dimension_sections([16, 24, 24, 0])
++
+     @classmethod
+     def filter_tensors(cls, item: tuple[str, Callable[[], Tensor]]) -> tuple[str, Callable[[], Tensor]] | None:
+         name, gen = item

@@ -1,0 +1,418 @@
+[
+  {
+    "lang": "EN",
+    "input": "Xin chào, tôi là một lập trình viên.",
+    "output": "Hello there! I'm a programmer who works in IT and lives on Long Island (NYC).",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Hôm nay thời tiết rất đẹp.",
+    "output": "The weather is very nice today.",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "EN",
+    "input": "Tôi cần sử dụng GPU để train model.",
+    "output": "I need to use a GPU for training models",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "API này trả về dữ liệu dạng JSON.",
+    "output": "The API returns data in a JSON format. This is an example of using this:",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Transformer đã thay đổi ngành AI.",
+    "output": "The transformer has changed in industry of ai",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Hệ thống đang gặp sự cố kết nối.",
+    "output": "The system is experiencing a connection problem.",
+    "kw_score": 60.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Chúng ta cần triển khai giải pháp mới.",
+    "output": "We need to implement a new solution.",
+    "kw_score": 75.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Tôi đã fork repo trên GitHub và tạo pull request.",
+    "output": "I have forked a repository on Github and createda pull request",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Bug này làm crash整个app, cần fix gấp.",
+    "output": "This bug is crashing our entire app. It needs to be fixed urgently!",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "CUDA error: out of memory,VRAM không đủ.",
+    "output": "CUDA Error : Out Of Memory - VRAM Not Enough",
+    "kw_score": 80.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Để finetune model, bạn cần dataset quality.",
+    "output": "In order to fine-tune a model you need high performance data sets (quality datasets).",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Server đang deploy lên AWS ECS với Docker container.",
+    "output": "The server is being deployed to Amazon EC2 Container Service (ECS) using docker containers",
+    "kw_score": 80.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Phần mềm này có vulnerability bảo mật nghiêm trọng.",
+    "output": "The software has serious security flaws/vulnerabilities",
+    "kw_score": 60.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Tôi cần refactor lại module authentication cho clean hơn.",
+    "output": "I need to restructure my authentication module for it be more tidy and clearer",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "EN",
+    "input": "Xin lỗi, tôi không thể kết nối vì firewall đang block port 443.",
+    "output": "I'm sorry but it was not possible to connect because Firewall is blocking Port443",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Database đang bị bottleneck ở query join, cần optimize index.",
+    "output": "The database is experiencing a performance issue due to slow joins in queries and needs an optimization of its indices (indexes).",
+    "kw_score": 40.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "Hello, I am a programmer.",
+    "output": "您好，我是一名程序员。",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "The weather is very nice today.",
+    "output": "天气今天非常好。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "I need to use GPU to train the model.",
+    "output": "我需要使用GPU来训练模型。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "This API returns data in JSON format.",
+    "output": "此API以JSON格式返回数据。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "Transformer has changed the AI industry.",
+    "output": "变压器改变了人工智能行业。",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "I forked the repo on GitHub and created a pull request.",
+    "output": "我在GitHub上分叉了这个仓库，并创建了一个pull请求。",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "The GPU is out of memory, VRAM is not enough.",
+    "output": "显卡内存不足，VRAM不够用。",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "We need to deploy the server to AWS ECS with Docker.",
+    "output": "需要将服务器部署到AWS ECS，并使用Docker进行管理。",
+    "kw_score": 75.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "This software has a critical security vulnerability.",
+    "output": "这种软件存在严重的安全漏洞。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "I need to refactor the authentication module to make it cleaner.",
+    "output": "我需要重构认证模块，使其更简洁。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "Sorry, I cannot connect because the firewall is blocking port 443.",
+    "output": "很抱歉，我无法连接，因为防火墙正在阻塞443端口。",
+    "kw_score": 75.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "The database is bottlenecked on the query join, need to optimize the index.",
+    "output": "数据库在查询连接部分遇到瓶颈，需要优化索引。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "Hello, I am a programmer.",
+    "output": "안녕하세요, 저는 프로그래머입니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "The weather is very nice today.",
+    "output": "오늘 날씨가 매우 좋다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "I need to use GPU to train the model.",
+    "output": "모형을 학습시키려면 GPU를 사용해야 합니다.",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "KR",
+    "input": "This API returns data in JSON format.",
+    "output": "<p <p> 이 애플리케이션 프로그래밍 인터페이스(API)는 JSON 형식의 데이터를 반환합니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "Transformer has changed the AI industry.",
+    "output": "트랜스포머는 AI 산업을 변화시켰다.",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "I forked the repo on GitHub and created a pull request.",
+    "output": "<br/>저는 깃 허브에서 리포지토리를 포크하였으며, 풀 리퀘스트를 만들었습니다.",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "The GPU is out of memory, VRAM is not enough.",
+    "output": "그래픽 처리 장치의 메모리가 다 떨어졌고, 비디오 랜덤 접근 메모리도 부족하다.",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "KR",
+    "input": "We need to deploy the server to AWS ECS with Docker.",
+    "output": "우리는 도커를 사용하여 서버를 AWS ECS에 배포해야 합니다.",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "KR",
+    "input": "This software has a critical security vulnerability.",
+    "output": "<p>이 소프트웨어는 심각한 보안 취약점을 가지고 있습니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "I need to refactor the authentication module to make it cleaner.",
+    "output": "인증 모듈을 더 깨끗하게 만들기 위해 리팩토링이 필요합니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "Sorry, I cannot connect because the firewall is blocking port 443.",
+    "output": "불행하게도, 방화벽이 443번 포트를 차단하여 연결할 수가 없습니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "The database is bottlenecked on the query join, need to optimize the index.",
+    "output": "데이터베이스는 쿼리 조인에서 颈瓶되었고, 인덱스를 최적화해야 합니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "Hello, I am a programmer.",
+    "output": "Xin chào tôi là một lập trình viên",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "The weather is very nice today.",
+    "output": "Thời tiết hôm nay rất dễ chịu",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "I need to use GPU to train the model.",
+    "output": "Tôi cần phải sử dụng card đồ họa để luyện tập mô hình này",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "This API returns data in JSON format.",
+    "output": "<p class=\"text-center\">API này trả về dữ liệu tạo thành định danh JSON.</p>",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "Transformer has changed the AI industry.",
+    "output": "<p <p <p> <p> <p> <p> <p> <p> <p> <p>",
+    "kw_score": 0.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "I forked the repo on GitHub and created a pull request.",
+    "output": "Tôi đã phân nhán kho lưu trữ ở Github và tạo một yêu cầu hợp xướng (pull request).",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "The GPU is out of memory, VRAM is not enough.",
+    "output": "<p>GPU không còn bộ nhớ trống, đè RAM làm việc quá tải.</p>",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "We need to deploy the server to AWS ECS with Docker.",
+    "output": "<p align=\"justify\">Chúng ta cần triển khai máy chủ lên Amazon Elastic Compute Service (ECS) với công nghệ đám mây, được quản trị bởi nền tảng Đám Mâu AWS.</p>",
+    "kw_score": 25.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "This software has a critical security vulnerability.",
+    "output": "Phần mềm này có lỗ hổng bảo mật nghiêm trọng",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "I need to refactor the authentication module to make it cleaner.",
+    "output": "Tôi cần phải sắp xếp đơn giả hóa mô-đun đăng nhập để làm cho chúc trong suốt và dễ hiểu",
+    "kw_score": 0.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "Sorry, I cannot connect because the firewall is blocking port 443.",
+    "output": "<p style=\"text-align: justify\">Xin lỗi nhưng tôi không thể định vì các bộ phần mềm chặt hoạt động trên Internet (firewalls) đang ngăn block giao tiếp ở Cổng số 4.43.</p>",
+    "kw_score": 25.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "VN",
+    "input": "The database is bottlenecked on the query join, need to optimize the index.",
+    "output": "<p>Cơ sở dữ liệu bị tắc nghẽn trong tham chiếu tra cứu đối với phầm mềm đọt xuất. Cần lên kế hoạch chỉnh đống cho hệ quả databsae.",
+    "kw_score": 25.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  }
+]

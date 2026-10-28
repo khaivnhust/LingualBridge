@@ -1,0 +1,89 @@
+{
+  "_comment": "Round 6: add Common Voice zh-CN (12,000 utts, 17.2 h) to the Round 5 mix. Round 5 won in-domain (Kspon ko -2.89, VoxPopuli en -0.30) but lost significantly on natural crowdsourced speech (Common Voice vi +3.16, zh +1.72, ko +0.99). Hypothesis: the deficit is ACOUSTIC DIVERSITY, not per-language utterance count -- CV zh-CN is the only large natural-acoustics corpus available.",
+  "_hypothesis": "Adding Common Voice zh-CN, which contains NO Vietnamese, should recover vi, zh AND ko on Common Voice together. If vi recovers without vi data, the diagnosis is acoustic domain mismatch and the fix is cheap. FALSIFIED if vi does not recover -- that would mean the deficit really is vi-specific and needs a Vietnamese conversational corpus we do not have.",
+  "_why_not_cv_vi": "CV vi train is only 2,102 utts / 2.65 h. Adding it would confound the domain test -- if vi recovers we would not know whether acoustic diversity or vi-specific data did it. Deliberately excluded from this arm. Open item: if the hypothesis is falsified, that is the next thing to add.",
+  "_gate": "Two-sided, because Round 5 already passes the in-domain gate and this arm must not give it up. (A) MUST HOLD: Kspon-5k ko CER <= 11.10 (Round 5) and VoxPopuli-500 en WER <= 4.97 (Round 5) -- conversational share falls from 68% to 60% when CV is added, and that dilution is the known risk (it cost +0.24 conversational ko in Round 4, repaired only by the full epoch). (B) MUST RECOVER: Common Voice vi/zh/ko improve vs Round 5 (15.00 / 8.02 / 8.40), and ideally return toward base (11.84 / 6.30 / 7.41). Round 3 OneVoice is eval-only and reported separately -- see _round3_eval.",
+  "_round3_eval": "Round 3 (OneVoice) is EVAL-ONLY: present in data.eval (as data/round3_eval/, source-tagged round3-<lang>) and absent from data.train. data/round3_eval/ is identical to data/round3/ except for the per-language source tag -- the TEXT IS UNCHANGED, because stripping happens at scoring time inside train_asr.evaluate(). An earlier attempt to pre-convert the references to digits was rejected: numwords.convert turned 'one thousand nine hundred and ninety and two thousand' into 993000 (genuinely ambiguous) and 'at one point' into 'at 1 point'. numwords.strip is format-neutral and never guesses.",
+  "base": {
+    "model_id": "weights/qwen3-asr-1.7B-4lang-trim-coverage",
+    "_note": "same base as arms A, B, Rounds 4 and 5"
+  },
+  "data": {
+    "train": [
+      "data/fleurs/en_train.jsonl",
+      "data/fleurs/zh_train.jsonl",
+      "data/fleurs/ko_train.jsonl",
+      "data/fleurs/vi_train.jsonl",
+      "data/ksponspeech/valid_12k.jsonl",
+      "data/voxpopuli/en_12k.jsonl",
+      "data/cvtrain/zh_12k.jsonl"
+    ],
+    "_mix_note": "Round 5 mix (en 42/ko 41/zh 9/vi 9) plus 12,000 Common Voice zh-CN sampled seed 42 from the 29,470 available. Lands at en 14,602 (31%) / zh 15,246 (32%) / ko 14,307 (30%) / vi 2,994 (6%). zh is the target of the addition; vi is deliberately left thin so the acoustic-diversity hypothesis is testable.",
+    "_cv_manifest_note": "data/cvtrain/zh_12k.jsonl was rebuilt from data/commonvoice/zh-CN/train.jsonl with lang remapped 'zh-CN'->'zh', because train_asr.read_manifests raises ValueError on any lang outside LANG_NAMES. The trainer's own filters (duration <= 30s, non-empty text) were applied BEFORE sampling so the 12,000 count matches what the trainer actually loads. Common Voice TEST is never touched here -- data/cvtest/ is eval-only.",
+    "eval": [
+      "data/fleurs/en_test.jsonl",
+      "data/fleurs/zh_test.jsonl",
+      "data/fleurs/ko_test.jsonl",
+      "data/fleurs/vi_test.jsonl",
+      "data/cvtest/vi.jsonl",
+      "data/cvtest/zh.jsonl",
+      "data/cvtest/ko.jsonl",
+      "data/round3_eval/en.jsonl",
+      "data/round3_eval/vi.jsonl",
+      "data/round3_eval/ko.jsonl",
+      "data/round3_eval/zh.jsonl"
+    ],
+    "_eval_note": "THREE DOMAINS, reported separately as 'lang@source' (e.g. vi@commonvoice-vi vs vi@fleurs). Round 5's whole premise is that FLEURS-only eval was blind to the regression that mattered: FLEURS said +0.18 on vi while Common Voice said +3.16. Evaluating on the hypothesis metric is not optional. Round 3 (OneVoice, synthetic) stays in as an out-of-domain tripwire -- it is where fine-tuning degrades fastest (+0.83 en) and we want to see that move during the run, not only at the end. Round 3 English is scored with numerals stripped from both sides (see train_asr.evaluate); raw, it reads ~2.3 WER high for every model regardless of quality. Gate decisions still come from post-hoc scoring on the full dedicated sets, never from this curve.",
+    "max_audio_seconds": 30,
+    "eval_per_lang": 50,
+    "_eval_size_note": "50 per (lang, source) cell = 550 utterances across 11 cells. eval_steps is kept equal to save_steps (200) so that every checkpoint also gets a domain-resolved eval point -- with a 1,472-step run that is 7 evals plus the end-of-run one (1472 % 200 != 0), i.e. 8 evals. At ~4,150 s of audio per eval and QAT RTF ~0.11 that is ~7.6 min each, ~61 min total on a ~3.0 h run. Per-cell n=50 resolves ~+/-2 points, enough to see a trend, not enough to decide on -- which is what the post-hoc suite is for.",
+    "_compute_note": "max_steps=null with epochs=1 gives total = steps_per_epoch = 47,149//32 = 1,473 steps. This is ~1.34x Round 5's compute and ~2.45x Round 1's. This arm is NOT compute-matched to any earlier arm and must not be described as such -- the whole comparison is against Round 5 at equal epoch count."
+  },
+  "freeze": {
+    "audio_tower": true,
+    "projector": false,
+    "embeddings": true,
+    "_embed_note": "unchanged from arms A/B and Rounds 4-5"
+  },
+  "method": "full",
+  "qat": {
+    "enabled": true,
+    "_why": "we ship Q4_K_M, so optimise the quantized surface. Patch is installed before eval too, so eval measures the model that actually deploys.",
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+    "_target_note": "all 7 decoder linears x 28 layers = 196",
+    "q6_modules": ["v_proj", "down_proj"],
+    "_q6_note": "llama-quant.cpp promotes attn_v and ffn_down to Q6_K under use_more_bits. For n=28 that is layers {0,1,2,5,8,11,14,17,20,23,24,25,26,27} = 14 of 28. VERIFIED against weights/gguf/trim-Q4_K_M.gguf.",
+    "n_layers": 28,
+    "quantise_scales": false,
+    "_scale_note": "scales are bf16; quantising them adds a second error source but at lr 1e-5 the update can be rounded away anyway."
+  },
+  "train": {
+    "lr": 1e-05,
+    "optim": "cpu_fp32_master",
+    "_optim_note": "fp32 master + fp32 AdamW in host RAM (~15.8 GiB predicted, ~20.9 GB observed in practice). Do not start llama-server or any model push during this run.",
+    "weight_decay": 0.0,
+    "epochs": 1,
+    "max_steps": null,
+    "_steps_note": "max_steps=null -> total = steps_per_epoch = 1,473, a genuine full epoch. The full epoch is load-bearing, not cosmetic: Round 4 showed that conversational ko is exposure-limited, and the full epoch is the only thing that repaired it.",
+    "per_device_batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_batch": 32,
+    "warmup_ratio": 0.03,
+    "lr_scheduler_type": "linear",
+    "gradient_checkpointing": true,
+    "max_grad_norm": 1.0,
+    "log_steps": 25,
+    "eval_steps": 200,
+    "save_steps": 200,
+    "seed": 42
+  },
+  "output": {
+    "run_dir": "runs/qat-en-conv-cv",
+    "merge_at_end": false
+  },
+  "_excluded": {
+    "_round3": "data/round3/ (OneVoice) is EVAL-ONLY for this arm. Not in train, not in the in-training eval. Scored post-hoc -- see _round3_eval. Its vi/ko references were long suspected truncated; for English they are demonstrably complete (ref 15.2 chars/sec vs hyp 14.9), and it is excluded from TRAINING regardless because it is synthetic TTS audio, not a product domain.",
+    "_cv_test": "data/cvtest/ and data/commonvoice/*/test.jsonl are eval-only. CV dev/other splits are unused. Training draws only from data/cvtrain/zh_12k.jsonl, which is built from the CV train split.",
+    "_musan": "data/musan and data/fleurs_noised* are excluded. Round 2 (qat-noise) showed synthetic noise LOSES to real conversational audio: 6.38 vs 6.16 paired on 2,823 noisy utterances."
+  }
+}
