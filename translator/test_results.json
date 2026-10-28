@@ -1,0 +1,178 @@
+[
+  {
+    "lang": "EN",
+    "input": "Xin chào, tôi là một lập trình viên.",
+    "output": "Hello, I am a programmer.",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Hôm nay thời tiết rất đẹp.",
+    "output": "The weather is very nice today.",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "EN",
+    "input": "Tôi cần sử dụng GPU để train model.",
+    "output": "I need to use a GPU to train the model.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "API này trả về dữ liệu dạng JSON.",
+    "output": "This API returns data in JSON format.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Transformer đã thay đổi ngành AI.",
+    "output": "Transformers have changed the AI industry.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Hệ thống đang gặp sự cố kết nối.",
+    "output": "The system is experiencing a connection issue.",
+    "kw_score": 60.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "EN",
+    "input": "Chúng ta cần triển khai giải pháp mới.",
+    "output": "We need to implement new solutions.",
+    "kw_score": 75.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "Hello, I am a programmer.",
+    "output": "您好，我是一名程序员。",
+    "kw_score": 50.0,
+    "purity": 100,
+    "status": "PARTIAL"
+  },
+  {
+    "lang": "ZH",
+    "input": "The weather is very nice today.",
+    "output": "今天天气非常好。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "I need to use GPU to train the model.",
+    "output": "我需要使用GPU来训练模型。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "This API returns data in JSON format.",
+    "output": "该API以JSON格式返回数据。",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "ZH",
+    "input": "Transformer has changed the AI industry.",
+    "output": "Transformer改变了人工智能行业。",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "Hello, I am a programmer.",
+    "output": "안녕하세요, 저는 프로그래머입니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "The weather is very nice today.",
+    "output": "오늘 날씨가 정말 좋아요.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "I need to use GPU to train the model.",
+    "output": "모델을 훈련시키려면 GPU를 사용해야 합니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "This API returns data in JSON format.",
+    "output": "이 API는 JSON 형식으로 데이터를 반환합니다.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "KR",
+    "input": "Transformer has changed the AI industry.",
+    "output": "트랜스포머는 AI 산업을 변화시켰습니다.",
+    "kw_score": 66.66666666666666,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "Hello, I am a programmer.",
+    "output": "Xin chào, tôi là một lập trình viên.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "The weather is very nice today.",
+    "output": "Hôm nay thời tiết rất tốt.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "I need to use GPU to train the model.",
+    "output": "Tôi cần sử dụng GPU để huấn luyện mô hình.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "This API returns data in JSON format.",
+    "output": "API này trả về dữ liệu dưới định dạng JSON.",
+    "kw_score": 100.0,
+    "purity": 100,
+    "status": "PASS"
+  },
+  {
+    "lang": "VN",
+    "input": "Transformer has changed the AI industry.",
+    "output": "Transformer đã thay đổi ngành trí tuệ nhân tạo.",
+    "kw_score": 33.33333333333333,
+    "purity": 100,
+    "status": "PARTIAL"
+  }
+]

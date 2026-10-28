@@ -1,0 +1,64 @@
+# ── never commit ─────────────────────────────────────────────────────────────
+# private keys / credentials
+*.pem
+*.key
+.env
+# local tool state (Claude Code permissions, opencode-rag index + config)
+.claude/
+.opencode/
+opencode-rag.json
+# a disk listing of another machine's filesystem
+translator/du_result.txt
+
+# ── generated build trees ─────────────────────────────────────────────────────
+build/
+dist/
+build-android*/
+__pycache__/
+*.pyc
+
+# ── device/vendor blobs pulled at build time ─────────────────────────────────
+third_party/
+harness/third_party/
+piper/
+firmware/
+
+# ── model weights (live in ~/.cache/huggingface/hub or are exported) ─────────
+*.gguf
+*.safetensors
+*.onnx
+*.bin
+ASR/weights/
+ASR/base-0.6B/
+translator/models/
+
+# ── datasets and audio (licensed corpora; KsponSpeech is not cleared for redistribution)
+ASR/data/
+translator/data/
+*.wav
+*.mp3
+*.flac
+*.zip
+*.tar
+*.tar.gz
+
+# ── device packages (models + binaries, rebuilt by scripts) ──────────────────
+s2st-qdc/
+ASR/package/
+
+# ── training runs, outputs and logs: local only (results + verdicts go in ASR/README.md) ──
+ASR/runs/
+ASR/results/
+ASR/logs/
+
+# ── benchmark outputs and logs: local only (results + verdicts go in harness/README.md)
+harness/runs/
+*.log
+
+# ── generated pipeline outputs ───────────────────────────────────────────────
+translator/pipeline_outputs/
+translator/piper_outputs/
+
+# ── handoff: commit the unpacked package folders, not archive copies of them
+handoff/*
+!handoff/*/

@@ -1,0 +1,670 @@
+{
+  "timestamp": "2026-10-09 23:43:17",
+  "dataset": "google/fleurs ko_kr test",
+  "footprint": {
+    "gpu_total_mb": 12227,
+    "gpu_base_mb": 3,
+    "mt": {
+      "load_s": 1.14,
+      "gpu_mb": 6432
+    },
+    "stt": {
+      "load_s": 8.67,
+      "gpu_mb": 4058
+    },
+    "tts": {
+      "load_s": 4.01,
+      "gpu_mb": 402,
+      "cpu_fallback_langs": [
+        "ko"
+      ]
+    },
+    "all_loaded_mb": 10895,
+    "warmup_s": 4.8,
+    "peak_gpu_mb": 11591
+  },
+  "summary": {
+    "n": 10,
+    "audio_avg_s": 9.55,
+    "stt_avg_s": 0.338,
+    "mt_avg_s": 1.669,
+    "tts_avg_s": 0.166,
+    "total_avg_s": 2.173,
+    "stt_rtf": 0.0372,
+    "tts_rtf": 0.0097,
+    "e2e_rtf": 0.238,
+    "stt_cer_pct": 3.0,
+    "chrf": {
+      "en": 50.0,
+      "zh": 29.5,
+      "vi": 48.1
+    },
+    "chrf_oracle": {
+      "en": 55.9,
+      "zh": 31.0,
+      "vi": 50.1
+    }
+  },
+  "sentences": [
+    {
+      "audio_sec": 11.94,
+      "stt_hyp": "낭만주의는 괴테나 피테, 슐레겔과 같은 작가들로부터 영향을 받은 문학 결정론의 많은 요소를 가지고 있었습니다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "Romanticism had many elements of literary determinism influenced by writers such as Goethe, Fichte, and Schlegel.",
+        "zh": "浪漫主义带有许多受歌德、费特、施莱格尔等作家影响的文学决定论元素。",
+        "vi": "Chủ nghĩa lãng mạn có nhiều yếu tố của chủ nghĩa quyết định văn học, chịu ảnh hưởng từ những nhà văn như Goethe, Fichte và Schlegel."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.03,
+          "audio_s": 7.12,
+          "rtf": 0.0043
+        },
+        "zh": {
+          "synth_s": 0.046,
+          "audio_s": 5.89,
+          "rtf": 0.0077
+        },
+        "vi": {
+          "synth_s": 0.027,
+          "audio_s": 5.93,
+          "rtf": 0.0046
+        }
+      },
+      "timings": {
+        "stt": 0.39,
+        "mt": 1.984,
+        "tts": 0.103,
+        "total": 2.477
+      },
+      "rtf": {
+        "stt": 0.0327,
+        "mt": 0.1661,
+        "tts": 0.0055,
+        "e2e": 0.2075
+      },
+      "fleurs_id": "1660",
+      "reference": "낭만주의는 괴테나 피히테, 슐레겔과 같은 작가들로부터 영향을 받은 문화 결정론의 많은 요소를 가지고 있었습니다.",
+      "references": {
+        "en": "Romanticism had a large element of cultural determinism, drawn from writers such as Goethe, Fichte, and Schlegel.",
+        "zh": "浪漫主义具有很强的文化决定论色彩。这源于歌德、费希特和施莱格尔等作家。",
+        "vi": "Chủ nghĩa lãng mạn có một yếu tố lớn về quyết định văn hóa, được rút ra từ những tác giả như Goethe, Fichte và Schlegel."
+      },
+      "stt_cer": 0.0426,
+      "chrf": {
+        "en": 67.7,
+        "zh": 29.6,
+        "vi": 62.3
+      },
+      "mt_oracle": {
+        "en": "Romanticism had many elements of cultural determinism influenced by writers such as Goethe, Fichte, and Schlegel.",
+        "zh": "浪漫主义带有许多受歌德、费希特、施莱格尔等作家影响的文化决定论元素。",
+        "vi": "Chủ nghĩa lãng mạn có nhiều yếu tố của chủ nghĩa quyết định văn hóa, chịu ảnh hưởng từ những nhà văn như Goethe, Fichte và Schlegel."
+      },
+      "chrf_oracle": {
+        "en": 76.2,
+        "zh": 40.8,
+        "vi": 65.1
+      }
+    },
+    {
+      "audio_sec": 10.14,
+      "stt_hyp": "그는 감산 규모는 중국의 경제 생산량을 바탕으로 정해질 것이라면서 수치를 밝히지 않았습니다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "Il a indiqué que l’ampleur des réductions serait déterminée en fonction de la production économique de la Chine, sans donner de chiffres précis.",
+        "zh": "他表示，减产幅度将依据中国的经济产出量来确定，但并未透露具体数字。",
+        "vi": "Ông nói rằng mức giảm sản lượng sẽ được xác định dựa trên sản lượng kinh tế của Trung Quốc nhưng không tiết lộ con số cụ thể."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.048,
+          "audio_s": 8.37,
+          "rtf": 0.0057
+        },
+        "zh": {
+          "synth_s": 0.045,
+          "audio_s": 5.97,
+          "rtf": 0.0075
+        },
+        "vi": {
+          "synth_s": 0.047,
+          "audio_s": 6.06,
+          "rtf": 0.0077
+        }
+      },
+      "timings": {
+        "stt": 0.33,
+        "mt": 1.903,
+        "tts": 0.14,
+        "total": 2.373
+      },
+      "rtf": {
+        "stt": 0.0326,
+        "mt": 0.1877,
+        "tts": 0.0069,
+        "e2e": 0.234
+      },
+      "fleurs_id": "1661",
+      "reference": "그는 감산 규모는 중국의 경제 생산량을 바탕으로 정해질 것이라면서 수치를 밝히지 않았습니다.",
+      "references": {
+        "en": "He did not set a figure for the cuts, saying they will be made based on China's economic output.",
+        "zh": "他没有设定削减数额，只是表示将根据中国的经济产出来决定数额。",
+        "vi": "Ông ấy đã không đưa ra con số cắt giảm, mà nói rằng việc đó sẽ được thực hiện dựa vào kết quả của nền kinh tế Trung Quốc."
+      },
+      "stt_cer": 0.0,
+      "chrf": {
+        "en": 19.7,
+        "zh": 25.3,
+        "vi": 34.8
+      },
+      "mt_oracle": {
+        "en": "Il a déclaré que l’ampleur des réductions serait déterminée en fonction de la production économique de la Chine, sans toutefois donner de chiffres.",
+        "zh": "他表示，减产幅度将依据中国的经济产出量来确定，但并未透露具体数字。",
+        "vi": "Ông nói rằng mức giảm sản lượng sẽ được xác định dựa trên sản lượng kinh tế của Trung Quốc nhưng không tiết lộ con số cụ thể."
+      },
+      "chrf_oracle": {
+        "en": 20.9,
+        "zh": 25.3,
+        "vi": 34.8
+      }
+    },
+    {
+      "audio_sec": 9.9,
+      "stt_hyp": "합금은 기본적으로 금속 두 개 이상의 혼합물이다. 주기율표상의 원소가 많이 있다는 것을 잊지 마라.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "An alloy is essentially a mixture of two or more metals. Remember there are many elements in the periodic table.",
+        "zh": "合金本质上是两种或两种以上金属的混合物。请不要忘记，元素周期表中存在大量的元素。",
+        "vi": "Hợp kim về cơ bản là sự pha trộn của hai hoặc nhiều loại kim loại. Đừng quên rằng có rất nhiều nguyên tố trong bảng tuần hoàn."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.07,
+          "audio_s": 6.03,
+          "rtf": 0.0116
+        },
+        "zh": {
+          "synth_s": 0.088,
+          "audio_s": 8.07,
+          "rtf": 0.011
+        },
+        "vi": {
+          "synth_s": 0.084,
+          "audio_s": 5.9,
+          "rtf": 0.0142
+        }
+      },
+      "timings": {
+        "stt": 0.359,
+        "mt": 1.832,
+        "tts": 0.242,
+        "total": 2.433
+      },
+      "rtf": {
+        "stt": 0.0363,
+        "mt": 0.185,
+        "tts": 0.0121,
+        "e2e": 0.2458
+      },
+      "fleurs_id": "1662",
+      "reference": "합금은 기본적으로 금속 두 개 이상의 혼합물이다. 주기율표 상에 원소가 많이 있다는 것을 잊지 마라.",
+      "references": {
+        "en": "Alloys are basically a mixture of two or more metals. Don't forget that there are many elements on the periodic table.",
+        "zh": "合金基本上由两种或以上金属混合而成。不要忘记一点，元素周期表上有很多元素。",
+        "vi": "Về cơ bản, hợp kim là hỗn hợp của hai kim loại trở lên. Đừng quên rằng có nhiều nguyên tố trên bảng tuần hoàn."
+      },
+      "stt_cer": 0.025,
+      "chrf": {
+        "en": 67.7,
+        "zh": 28.3,
+        "vi": 61.0
+      },
+      "mt_oracle": {
+        "en": "An alloy is essentially a mixture of two or more metals. Remember that there are many elements on the periodic table.",
+        "zh": "合金本质上是两种或两种以上金属的混合物。别忘了，元素周期表上存在着大量的元素。",
+        "vi": "Hợp kim về cơ bản là sự kết hợp của hai hoặc nhiều loại kim loại. Đừng quên rằng có rất nhiều nguyên tố trong bảng tuần hoàn."
+      },
+      "chrf_oracle": {
+        "en": 74.9,
+        "zh": 27.2,
+        "vi": 63.9
+      }
+    },
+    {
+      "audio_sec": 11.76,
+      "stt_hyp": "건조한 두 분말을 함께 회전 후에 물에 젖은 깨끗한 손으로 공에 짜 넣는다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "After mixing the two dry powders together, press them into a ball with clean, wet hands.",
+        "zh": "将两种干燥的粉末混合后旋转，再用湿润的干净手将其压入球中。",
+        "vi": "Trộn hai loại bột khô với nhau, sau đó dùng tay sạch ướt nặn chúng vào quả cầu."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.045,
+          "audio_s": 5.24,
+          "rtf": 0.0086
+        },
+        "zh": {
+          "synth_s": 0.044,
+          "audio_s": 5.6,
+          "rtf": 0.0079
+        },
+        "vi": {
+          "synth_s": 0.046,
+          "audio_s": 3.92,
+          "rtf": 0.0117
+        }
+      },
+      "timings": {
+        "stt": 0.33,
+        "mt": 1.294,
+        "tts": 0.136,
+        "total": 1.76
+      },
+      "rtf": {
+        "stt": 0.0281,
+        "mt": 0.11,
+        "tts": 0.0092,
+        "e2e": 0.1496
+      },
+      "fleurs_id": "1664",
+      "reference": "건조한 두 분말을 함께 휘저은 후에 물에 젖은 깨끗한 손으로 공에 짜 넣는다.",
+      "references": {
+        "en": "Swirl the two dry powders together and then, with clean wet hands, squeeze them into a ball.",
+        "zh": "搅动两种干粉使其混合，然后用干净的湿手把它们揉成一个球。",
+        "vi": "Vặn hai cục bột khô với nhau, rồi bóp chúng thành một viên cầu bằng tay ướt, sạch."
+      },
+      "stt_cer": 0.1,
+      "chrf": {
+        "en": 63.1,
+        "zh": 13.1,
+        "vi": 38.5
+      },
+      "mt_oracle": {
+        "en": "After mixing the two dry powders together, press them into a ball with clean, wet hands.",
+        "zh": "将两种干燥的粉末混合搅拌后，用湿润的干净手将其挤入球中。",
+        "vi": "Trộn hai loại bột khô với nhau, sau đó dùng tay sạch ướt nặn chúng vào quả bóng."
+      },
+      "chrf_oracle": {
+        "en": 63.1,
+        "zh": 13.8,
+        "vi": 37.6
+      }
+    },
+    {
+      "audio_sec": 9.96,
+      "stt_hyp": "자신의 의견이 아닌 정부의 의견을 듣고 싶을 수도 있지만, 각국 정부의 조언들은 자국민에 맞춰져 있다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "You might want to hear the government’s opinion rather than your own, but the advice from governments around the world is tailored to their own citizens.",
+        "zh": "你或许想听取政府的意见而非自己的观点，但各国政府的建议都是针对本国民众制定的。",
+        "vi": "Có thể bạn muốn nghe quan điểm của chính phủ thay vì quan điểm của bản thân, nhưng các lời khuyên từ chính phủ các nước đều được thiết kế dành cho người dân trong nước."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.046,
+          "audio_s": 7.23,
+          "rtf": 0.0064
+        },
+        "zh": {
+          "synth_s": 0.046,
+          "audio_s": 6.91,
+          "rtf": 0.0066
+        },
+        "vi": {
+          "synth_s": 0.048,
+          "audio_s": 7.7,
+          "rtf": 0.0062
+        }
+      },
+      "timings": {
+        "stt": 0.362,
+        "mt": 2.004,
+        "tts": 0.14,
+        "total": 2.506
+      },
+      "rtf": {
+        "stt": 0.0364,
+        "mt": 0.2012,
+        "tts": 0.0064,
+        "e2e": 0.2516
+      },
+      "fleurs_id": "1666",
+      "reference": "자신의 의견이 아닌 정부의 의견을 듣고 싶을 수도 있지만, 각국 정부의 조언들은 자국민에 맞춰져 있다.",
+      "references": {
+        "en": "You may also wish to consult the advice of governments other than your own, but their advice is designed for their citizens.",
+        "zh": "你也可以咨询除贵国以外其他政府的建议，但他们的建议是为他们的公民而制定的。",
+        "vi": "Bạn cũng có thể muốn tham khảo lời khuyên của các chính phủ khác ngoài chính phủ của bạn, nhưng lời khuyên của họ là dành cho công dân của họ."
+      },
+      "stt_cer": 0.0,
+      "chrf": {
+        "en": 51.2,
+        "zh": 16.0,
+        "vi": 38.7
+      },
+      "mt_oracle": {
+        "en": "You might want to hear the government’s opinion rather than your own, but the advice from governments around the world is tailored to their own citizens.",
+        "zh": "你或许想听取政府的意见而非自己的观点，但各国政府的建议都是针对本国民众制定的。",
+        "vi": "Có thể bạn muốn nghe ý kiến của chính phủ thay vì ý kiến của bản thân, nhưng các lời khuyên từ chính phủ các nước đều được thiết kế dành cho người dân trong nước."
+      },
+      "chrf_oracle": {
+        "en": 51.2,
+        "zh": 16.0,
+        "vi": 39.8
+      }
+    },
+    {
+      "audio_sec": 7.2,
+      "stt_hyp": "찬드라 시에카르 솔랑키 경찰서장은 피고인이 얼굴을 가린 채 법정에 나왔다고 말했다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "Police chief Chandra Siekhar Solanki said the defendant appeared in court with their face covered.",
+        "zh": "警察局长钱德拉·西埃卡尔·索兰基表示，被告出庭时蒙着脸。",
+        "vi": "Cảnh sát trưởng Chandra Siekhar Solanki nói rằng bị cáo đã xuất hiện tại tòa với khuôn mặt bị che."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.046,
+          "audio_s": 4.75,
+          "rtf": 0.0098
+        },
+        "zh": {
+          "synth_s": 0.047,
+          "audio_s": 5.15,
+          "rtf": 0.009
+        },
+        "vi": {
+          "synth_s": 0.045,
+          "audio_s": 4.46,
+          "rtf": 0.01
+        }
+      },
+      "timings": {
+        "stt": 0.358,
+        "mt": 1.596,
+        "tts": 0.138,
+        "total": 2.092
+      },
+      "rtf": {
+        "stt": 0.0497,
+        "mt": 0.2217,
+        "tts": 0.0096,
+        "e2e": 0.2905
+      },
+      "fleurs_id": "1669",
+      "reference": "찬드라 셰카르 솔랑키 경찰서장은 피고인이 얼굴을 가린 채 법정에 나왔다고 말했다.",
+      "references": {
+        "en": "Police superintendent Chandra Shekhar Solanki said the accused appeared in court with covered faces.",
+        "zh": "警察局长钱德拉·谢卡尔·索兰基说，被告人出庭时都蒙住了脸。",
+        "vi": "Chỉ huy cảnh sát Chandra Shekhar Solanki nói rằng những bị cáo đã xuất hiện tại tòa với khuôn mặt bị che kín."
+      },
+      "stt_cer": 0.0588,
+      "chrf": {
+        "en": 61.8,
+        "zh": 43.0,
+        "vi": 75.0
+      },
+      "mt_oracle": {
+        "en": "Police Chief Chandra Shekhar Solanki said the defendant appeared in court with their face covered.",
+        "zh": "昌德拉·谢卡尔·索兰基警察局长表示，被告面带遮盖物出庭。",
+        "vi": "Cảnh sát trưởng Chandra Shekhar Solanki nói rằng bị cáo đã xuất hiện tại tòa với khuôn mặt bị che."
+      },
+      "chrf_oracle": {
+        "en": 65.5,
+        "zh": 40.1,
+        "vi": 79.3
+      }
+    },
+    {
+      "audio_sec": 9.78,
+      "stt_hyp": "원단이 너무 뜨거워지지 않도록 주의하세요. 원단이 수축하거나 그을릴 수 있습니다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "Faites attention à ce que le tissu ne devienne pas trop chaud. Il peut se rétrécir ou se brûler.",
+        "zh": "请注意不要让布料过热，否则它可能会收缩或烧焦。",
+        "vi": "Hãy chú ý đừng để vải bị quá nóng. Vải có thể co lại hoặc bị cháy."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.089,
+          "audio_s": 5.99,
+          "rtf": 0.0149
+        },
+        "zh": {
+          "synth_s": 0.046,
+          "audio_s": 5.11,
+          "rtf": 0.009
+        },
+        "vi": {
+          "synth_s": 0.088,
+          "audio_s": 3.49,
+          "rtf": 0.0251
+        }
+      },
+      "timings": {
+        "stt": 0.299,
+        "mt": 1.355,
+        "tts": 0.223,
+        "total": 1.876
+      },
+      "rtf": {
+        "stt": 0.0305,
+        "mt": 0.1385,
+        "tts": 0.0153,
+        "e2e": 0.1919
+      },
+      "fleurs_id": "1672",
+      "reference": "원단이 너무 뜨거워지지 않도록 주의하세요(원단이 수축하거나 그을릴 수 있습니다).",
+      "references": {
+        "en": "Be careful not to allow fabric to become too hot (which can cause shrinkage, or in extreme cases, scorch).",
+        "zh": "小心不要让衣服变得太热（这可能会产生收缩现象，在极端情况下会把衣服烤焦）。",
+        "vi": "Cẩn thận đừng để vải quá nóng (có thể gây co rút, hoặc trong trường hợp nghiêm trọng, có thể gây cháy)."
+      },
+      "stt_cer": 0.0,
+      "chrf": {
+        "en": 12.8,
+        "zh": 9.4,
+        "vi": 25.2
+      },
+      "mt_oracle": {
+        "en": "Faites attention à ce que le tissu ne devienne pas trop chaud (il peut se rétrécir ou se brûler).",
+        "zh": "请注意不要让布料过热（否则布料可能会收缩或烧焦）。",
+        "vi": "Chú ý đừng để vải bị quá nóng (vải có thể co lại hoặc bị cháy)."
+      },
+      "chrf_oracle": {
+        "en": 13.4,
+        "zh": 11.8,
+        "vi": 28.4
+      }
+    },
+    {
+      "audio_sec": 10.38,
+      "stt_hyp": "일부 지역에서는 1분간 물을 끓이는 것으로 충분하다. 다른 지역에서는 수분 동안 물을 끓일 필요가 있다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "In some areas, it’s sufficient to boil the water for 1 minute. In other areas, it’s necessary to boil the water for several minutes.",
+        "zh": "在某些地区，将水煮1分钟就足够了。而在其他地区，则需要将水煮更长时间。",
+        "vi": "Ở một số khu vực, chỉ cần đun sôi nước trong 1 phút là đủ. Ở những khu vực khác, cần phải đun sôi nước trong vài phút."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.09,
+          "audio_s": 7.01,
+          "rtf": 0.0129
+        },
+        "zh": {
+          "synth_s": 0.089,
+          "audio_s": 6.33,
+          "rtf": 0.0141
+        },
+        "vi": {
+          "synth_s": 0.088,
+          "audio_s": 5.68,
+          "rtf": 0.0154
+        }
+      },
+      "timings": {
+        "stt": 0.364,
+        "mt": 1.945,
+        "tts": 0.268,
+        "total": 2.577
+      },
+      "rtf": {
+        "stt": 0.0351,
+        "mt": 0.1874,
+        "tts": 0.0141,
+        "e2e": 0.2483
+      },
+      "fleurs_id": "1674",
+      "reference": "일부 지역에서는 1분간 물을 끓이는 것으로 충분하다. 다른 지역에서는 수 분 동안 물을 끓일 필요가 있다.",
+      "references": {
+        "en": "In some areas boiling water for a minute is enough, in others several minutes are needed.",
+        "zh": "在某些地区，水煮一分钟就足够了，在其他地区则需要几分钟的时间。",
+        "vi": "Ở một số nơi chỉ cần đun nước sôi một phút là đủ, trong khi ở những nơi khác cần phải đun sôi vài phút."
+      },
+      "stt_cer": 0.0,
+      "chrf": {
+        "en": 49.7,
+        "zh": 40.1,
+        "vi": 53.6
+      },
+      "mt_oracle": {
+        "en": "In some areas, it’s sufficient to boil the water for 1 minute. In other areas, the water needs to be boiled for several minutes.",
+        "zh": "在某些地区，将水煮1分钟就足够了。而在其他地区，则需要将水煮几分钟。",
+        "vi": "Ở một số khu vực, chỉ cần đun sôi nước trong 1 phút là đủ. Ở những khu vực khác, cần phải đun sôi nước trong vài phút."
+      },
+      "chrf_oracle": {
+        "en": 51.5,
+        "zh": 40.8,
+        "vi": 53.6
+      }
+    },
+    {
+      "audio_sec": 9.72,
+      "stt_hyp": "모든 남아프리카 국립공원과 마찬가지로 공원에는 매일 보존료와 입장료가 있습니다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "Comme dans tous les parcs nationaux d’Afrique du Sud, le parc impose un frais de conservation et un droit d’entrée chaque jour.",
+        "zh": "与所有南非国家公园一样，该公园也每天收取保护费及入场费。",
+        "vi": "Như tất cả các công viên quốc gia ở Nam Phi, công viên này cũng thu phí bảo tồn và phí vào cửa hàng ngày."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.047,
+          "audio_s": 7.74,
+          "rtf": 0.0061
+        },
+        "zh": {
+          "synth_s": 0.046,
+          "audio_s": 5.28,
+          "rtf": 0.0087
+        },
+        "vi": {
+          "synth_s": 0.047,
+          "audio_s": 5.07,
+          "rtf": 0.0092
+        }
+      },
+      "timings": {
+        "stt": 0.321,
+        "mt": 1.489,
+        "tts": 0.14,
+        "total": 1.95
+      },
+      "rtf": {
+        "stt": 0.033,
+        "mt": 0.1532,
+        "tts": 0.0077,
+        "e2e": 0.2006
+      },
+      "fleurs_id": "1676",
+      "reference": "모든 남아프리카 국립공원과 마찬가지로, 공원에는 매일 보존료와 입장료가 있습니다.",
+      "references": {
+        "en": "As with all South African National Parks, there are daily conservation and entry fees for the park.",
+        "zh": "与所有南非国家公园一样，该公园每天都收取养护费和门票费。",
+        "vi": "Cũng như tất cả mọi Công Viên Quốc Gia của Nam Phi, hoạt động bảo tồn diễn ra hàng ngày và phải mua vé vào cửa công viên."
+      },
+      "stt_cer": 0.0,
+      "chrf": {
+        "en": 30.3,
+        "zh": 56.0,
+        "vi": 39.4
+      },
+      "mt_oracle": {
+        "en": "Like all national parks in South Africa, the park has a daily conservation fee and entry fee.",
+        "zh": "与所有南非国家公园一样，该公园每天也收取保护费及入场费。",
+        "vi": "Như tất cả các công viên quốc gia ở Nam Phi, công viên này cũng thu phí bảo tồn và phí vào cửa hàng ngày."
+      },
+      "chrf_oracle": {
+        "en": 57.6,
+        "zh": 62.1,
+        "vi": 39.4
+      }
+    },
+    {
+      "audio_sec": 4.68,
+      "stt_hyp": "어느 날 날개를 접을 수 없는 곤충은 잠자리와 파리밖에 없습니다.",
+      "stt_lang_detected": "Korean",
+      "mt": {
+        "en": "One day, the only insects that can’t fold their wings are dragonflies and flies.",
+        "zh": "据说，唯一无法折叠翅膀的昆虫就是蜻蜓和苍蝇。",
+        "vi": "Một ngày nào đó, những loài côn trùng không thể gập cánh chỉ còn chuồn chuồn và ruồi mà thôi."
+      },
+      "tts": {
+        "en": {
+          "synth_s": 0.045,
+          "audio_s": 4.69,
+          "rtf": 0.0096
+        },
+        "zh": {
+          "synth_s": 0.044,
+          "audio_s": 4.3,
+          "rtf": 0.0103
+        },
+        "vi": {
+          "synth_s": 0.045,
+          "audio_s": 4.57,
+          "rtf": 0.0098
+        }
+      },
+      "timings": {
+        "stt": 0.267,
+        "mt": 1.287,
+        "tts": 0.134,
+        "total": 1.688
+      },
+      "rtf": {
+        "stt": 0.0571,
+        "mt": 0.2749,
+        "tts": 0.0099,
+        "e2e": 0.3607
+      },
+      "fleurs_id": "1677",
+      "reference": "오늘날 날개를 접을 수 없는 곤충은 잠자리와 파리밖에 없습니다.",
+      "references": {
+        "en": "Today, the only insects that cannot fold back their wings are dragon flies and mayflies.",
+        "zh": "如今，唯一不能向后折叠翅膀的昆虫是蜻蜓和蜉蝣。",
+        "vi": "Ngày nay, những loại côn trung không thể gập cánh lại chỉ có chuồn chuồn và những con phù du."
+      },
+      "stt_cer": 0.0769,
+      "chrf": {
+        "en": 75.6,
+        "zh": 34.5,
+        "vi": 53.0
+      },
+      "mt_oracle": {
+        "en": "Today, the only insects that cannot fold their wings are dragonflies and flies.",
+        "zh": "如今，无法折叠翅膀的昆虫只有蜻蜓和苍蝇。",
+        "vi": "Ngày nay, chỉ còn chuồn chuồn và ruồi là những loài côn trùng không thể gập cánh."
+      },
+      "chrf_oracle": {
+        "en": 84.8,
+        "zh": 32.0,
+        "vi": 58.7
+      }
+    }
+  ]
+}

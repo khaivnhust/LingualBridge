@@ -1,0 +1,1086 @@
+{
+  "timestamp": "2026-08-15 21:48:25",
+  "config": {
+    "langs": [
+      "en",
+      "zh",
+      "ko",
+      "vi"
+    ],
+    "max_sentences_per_lang": null,
+    "accuracy": true,
+    "strategy": "swap"
+  },
+  "footprint": {
+    "gpu_total_mb": 8188,
+    "ram_total_mb": 15169,
+    "gpu_base_mb": 23,
+    "ram_base_mb": 2861,
+    "stt": {
+      "load_s": 14.81,
+      "gpu_mb": 4584,
+      "ram_mb": 874,
+      "freed_mb": -102
+    },
+    "mt": {
+      "load_s": 1.82,
+      "gpu_mb": 6388,
+      "ram_mb": 59,
+      "freed_mb": 0
+    },
+    "peak_both_mb": 10995,
+    "peak_both_fits": false,
+    "strategy": "swap",
+    "test_peak_gpu_mb": 125
+  },
+  "languages": {
+    "en": {
+      "summary": {
+        "lang": "en",
+        "n_sentences": 5,
+        "stt_avg_s": 0.547,
+        "stt_median_s": 0.332,
+        "stt_avg_rtfx": 6.52,
+        "mt_avg_s": 1.452,
+        "tts_avg_s": 1.396,
+        "wall_avg_s": 3.395,
+        "stt_avg_error": 0.0667,
+        "kw_avg": 88.4,
+        "stt_model_loads": [
+          13.017
+        ],
+        "mt_model_loads": [
+          3.126
+        ],
+        "stt_loads_total_s": 13.02,
+        "mt_loads_total_s": 3.13,
+        "stt_avg_error_pct": 6.67,
+        "kw_per_target": {
+          "zh": 83.3,
+          "ko": 100.0,
+          "vi": 82.0
+        }
+      },
+      "sentences": [
+        {
+          "sentence": "Hello, how are you doing today?",
+          "audio_sec": 1.96,
+          "stt_hyp": "Hello. How are you doing today?",
+          "stt_lang_detected": "English",
+          "stt_error": 0.3333,
+          "stt_rtfx": 1.31,
+          "mt": {
+            "zh": "你好。你今天过得怎么样？",
+            "ko": "안녕하세요. 오늘은 어떻게 지내고 계세요?",
+            "vi": "Xin chào. Hôm nay bạn khỏe không?"
+          },
+          "tts": {
+            "zh": {
+              "rtf": 0.0459,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_000_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0405,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_000_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0489,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_000_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.017,
+            "stt": 1.496,
+            "mt_load": 3.126,
+            "mt_total": 1.576,
+            "mt_per_target": {},
+            "tts": {
+              "zh": 0.458,
+              "ko": 0.782,
+              "vi": 0.313
+            },
+            "tts_total": 1.553,
+            "total": 4.625
+          },
+          "keyword_accuracy": {
+            "zh": 75.0,
+            "ko": 100.0,
+            "vi": 80.0
+          }
+        },
+        {
+          "sentence": "The weather is beautiful this morning.",
+          "audio_sec": 1.98,
+          "stt_hyp": "The weather is beautiful this morning.",
+          "stt_lang_detected": "English",
+          "stt_error": 0.0,
+          "stt_rtfx": 7.66,
+          "mt": {
+            "zh": "今天早上的天气很好。",
+            "ko": "오늘 아침 날씨가 정말 좋아요.",
+            "vi": "Thời tiết sáng nay thật đẹp."
+          },
+          "tts": {
+            "zh": {
+              "rtf": 0.0458,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_001_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0407,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_001_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0485,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_001_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.017,
+            "stt": 0.258,
+            "mt_load": 3.126,
+            "mt_total": 1.347,
+            "mt_per_target": {},
+            "tts": {
+              "zh": 0.35,
+              "ko": 0.602,
+              "vi": 0.295
+            },
+            "tts_total": 1.247,
+            "total": 2.852
+          },
+          "keyword_accuracy": {
+            "zh": 100.0,
+            "ko": 100.0,
+            "vi": 75.0
+          }
+        },
+        {
+          "sentence": "I need to go to the store to buy some groceries.",
+          "audio_sec": 3.13,
+          "stt_hyp": "I need to go to the store to buy some groceries.",
+          "stt_lang_detected": "English",
+          "stt_error": 0.0,
+          "stt_rtfx": 8.59,
+          "mt": {
+            "zh": "我得去商店买些食品杂货。",
+            "ko": "식료품을 사러 가게에 가야 해요.",
+            "vi": "Tôi cần đến cửa hàng để mua một số thực phẩm."
+          },
+          "tts": {
+            "zh": {
+              "rtf": 0.0443,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_002_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0422,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_002_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0488,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_002_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.017,
+            "stt": 0.364,
+            "mt_load": 3.126,
+            "mt_total": 1.48,
+            "mt_per_target": {},
+            "tts": {
+              "zh": 0.344,
+              "ko": 0.63,
+              "vi": 0.351
+            },
+            "tts_total": 1.325,
+            "total": 3.169
+          },
+          "keyword_accuracy": {
+            "zh": 75.0,
+            "ko": 100.0,
+            "vi": 75.0
+          }
+        },
+        {
+          "sentence": "Can you help me with this problem?",
+          "audio_sec": 1.76,
+          "stt_hyp": "Can you help me with this problem?",
+          "stt_lang_detected": "English",
+          "stt_error": 0.0,
+          "stt_rtfx": 6.2,
+          "mt": {
+            "zh": "你能帮我解决这个问题吗？",
+            "ko": "이 문제를 해결하는 데 도와주실 수 있나요?",
+            "vi": "Có thể giúp tôi với vấn đề này không?"
+          },
+          "tts": {
+            "zh": {
+              "rtf": 0.0476,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_003_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0423,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_003_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0439,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_003_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.017,
+            "stt": 0.283,
+            "mt_load": 3.126,
+            "mt_total": 1.469,
+            "mt_per_target": {},
+            "tts": {
+              "zh": 0.342,
+              "ko": 0.716,
+              "vi": 0.305
+            },
+            "tts_total": 1.364,
+            "total": 3.116
+          },
+          "keyword_accuracy": {
+            "zh": 66.7,
+            "ko": 100.0,
+            "vi": 100.0
+          }
+        },
+        {
+          "sentence": "The meeting has been rescheduled to tomorrow afternoon.",
+          "audio_sec": 2.94,
+          "stt_hyp": "The meeting has been rescheduled to tomorrow afternoon.",
+          "stt_lang_detected": "English",
+          "stt_error": 0.0,
+          "stt_rtfx": 8.86,
+          "mt": {
+            "zh": "会议已改期至明天下午举行。",
+            "ko": "회의는 내일 오후로 일정이 변경되었습니다.",
+            "vi": "Cuộc họp đã được dời sang chiều mai."
+          },
+          "tts": {
+            "zh": {
+              "rtf": 0.0471,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_004_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0432,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_004_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0483,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_en_004_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.017,
+            "stt": 0.332,
+            "mt_load": 3.126,
+            "mt_total": 1.388,
+            "mt_per_target": {},
+            "tts": {
+              "zh": 0.375,
+              "ko": 0.752,
+              "vi": 0.365
+            },
+            "tts_total": 1.492,
+            "total": 3.212
+          },
+          "keyword_accuracy": {
+            "zh": 100.0,
+            "ko": 100.0,
+            "vi": 80.0
+          }
+        }
+      ]
+    },
+    "zh": {
+      "summary": {
+        "lang": "zh",
+        "n_sentences": 5,
+        "stt_avg_s": 0.479,
+        "stt_median_s": 0.271,
+        "stt_avg_rtfx": 7.55,
+        "mt_avg_s": 1.578,
+        "tts_avg_s": 1.409,
+        "wall_avg_s": 3.466,
+        "stt_avg_error": 0.0,
+        "kw_avg": 75.6,
+        "stt_model_loads": [
+          14.536
+        ],
+        "mt_model_loads": [
+          2.368
+        ],
+        "stt_loads_total_s": 14.54,
+        "mt_loads_total_s": 2.37,
+        "stt_avg_error_pct": 0.0,
+        "kw_per_target": {
+          "en": 58.3,
+          "ko": 83.3,
+          "vi": 85.0
+        }
+      },
+      "sentences": [
+        {
+          "sentence": "你好，你今天过得怎么样？",
+          "audio_sec": 2.12,
+          "stt_hyp": "你好，你今天过得怎么样？",
+          "stt_lang_detected": "Chinese",
+          "stt_error": 0.0,
+          "stt_rtfx": 1.68,
+          "mt": {
+            "en": "Hello, how was your day?",
+            "ko": "안녕하세요, 오늘은 어떻게 보내셨나요?",
+            "vi": "Xin chào, hôm nay bạn thế nào?"
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0451,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_000_en.wav"
+            },
+            "ko": {
+              "rtf": 0.0423,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_000_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0475,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_000_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.536,
+            "stt": 1.259,
+            "mt_load": 2.368,
+            "mt_total": 1.588,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.364,
+              "ko": 0.659,
+              "vi": 0.352
+            },
+            "tts_total": 1.375,
+            "total": 4.222
+          },
+          "keyword_accuracy": {
+            "en": 66.7,
+            "ko": 66.7,
+            "vi": 100.0
+          }
+        },
+        {
+          "sentence": "今天早上的天气真好。",
+          "audio_sec": 2.14,
+          "stt_hyp": "今天早上的天气真好。",
+          "stt_lang_detected": "Chinese",
+          "stt_error": 0.0,
+          "stt_rtfx": 8.01,
+          "mt": {
+            "en": "The weather is really nice this morning.",
+            "ko": "오늘 아침 날씨가 정말 좋아요.",
+            "vi": "Thời tiết sáng nay thật tốt."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.047,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_001_en.wav"
+            },
+            "ko": {
+              "rtf": 0.0433,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_001_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0525,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_001_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.536,
+            "stt": 0.267,
+            "mt_load": 2.368,
+            "mt_total": 1.381,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.35,
+              "ko": 0.663,
+              "vi": 0.308
+            },
+            "tts_total": 1.322,
+            "total": 2.97
+          },
+          "keyword_accuracy": {
+            "en": 50.0,
+            "ko": 100.0,
+            "vi": 50.0
+          }
+        },
+        {
+          "sentence": "我需要去商店买一些日用品。",
+          "audio_sec": 2.56,
+          "stt_hyp": "我需要去商店买一些日用品。",
+          "stt_lang_detected": "Chinese",
+          "stt_error": 0.0,
+          "stt_rtfx": 6.95,
+          "mt": {
+            "en": "I need to go to the store to buy some daily necessities.",
+            "ko": "저는 가게에 가서 생활용품을 좀 사야 해요.",
+            "vi": "Tôi cần đến cửa hàng mua một số đồ dùng hàng ngày."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0449,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_002_en.wav"
+            },
+            "ko": {
+              "rtf": 0.0441,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_002_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0407,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_002_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.536,
+            "stt": 0.368,
+            "mt_load": 2.368,
+            "mt_total": 1.851,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.384,
+              "ko": 0.677,
+              "vi": 0.355
+            },
+            "tts_total": 1.415,
+            "total": 3.634
+          },
+          "keyword_accuracy": {
+            "en": 75.0,
+            "ko": 50.0,
+            "vi": 100.0
+          }
+        },
+        {
+          "sentence": "你能帮我解决这个问题吗？",
+          "audio_sec": 2.59,
+          "stt_hyp": "你能帮我解决这个问题吗？",
+          "stt_lang_detected": "Chinese",
+          "stt_error": 0.0,
+          "stt_rtfx": 11.27,
+          "mt": {
+            "en": "Can you help me solve this problem?",
+            "ko": "이 문제를 해결하는 데 도와주실 수 있나요?",
+            "vi": "Bạn có thể giúp tôi giải quyết vấn đề này không?"
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.045,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_003_en.wav"
+            },
+            "ko": {
+              "rtf": 0.042,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_003_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0485,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_003_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.536,
+            "stt": 0.23,
+            "mt_load": 2.368,
+            "mt_total": 1.617,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.313,
+              "ko": 0.834,
+              "vi": 0.376
+            },
+            "tts_total": 1.523,
+            "total": 3.37
+          },
+          "keyword_accuracy": {
+            "en": 100.0,
+            "ko": 100.0,
+            "vi": 100.0
+          }
+        },
+        {
+          "sentence": "会议已经改到明天下午了。",
+          "audio_sec": 2.67,
+          "stt_hyp": "会议已经改到明天下午了。",
+          "stt_lang_detected": "Chinese",
+          "stt_error": 0.0,
+          "stt_rtfx": 9.86,
+          "mt": {
+            "en": "La réunion a été reportée à demain après-midi.",
+            "ko": "회의가 내일 오후로 변경되었습니다.",
+            "vi": "Cuộc họp đã được dời sang chiều mai."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0528,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_004_en.wav"
+            },
+            "ko": {
+              "rtf": 0.0406,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_004_ko.wav"
+            },
+            "vi": {
+              "rtf": 0.0469,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_zh_004_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.536,
+            "stt": 0.271,
+            "mt_load": 2.368,
+            "mt_total": 1.451,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.409,
+              "ko": 0.673,
+              "vi": 0.328
+            },
+            "tts_total": 1.41,
+            "total": 3.132
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "ko": 100.0,
+            "vi": 75.0
+          }
+        }
+      ]
+    },
+    "ko": {
+      "summary": {
+        "lang": "ko",
+        "n_sentences": 5,
+        "stt_avg_s": 0.966,
+        "stt_median_s": 0.822,
+        "stt_avg_rtfx": 7.1,
+        "mt_avg_s": 3.038,
+        "tts_avg_s": 1.443,
+        "wall_avg_s": 5.447,
+        "stt_avg_error": 1.5977,
+        "kw_avg": 8.3,
+        "stt_model_loads": [
+          14.873
+        ],
+        "mt_model_loads": [
+          2.445
+        ],
+        "stt_loads_total_s": 14.87,
+        "mt_loads_total_s": 2.44,
+        "stt_avg_error_pct": 159.77,
+        "kw_per_target": {
+          "en": 0.0,
+          "zh": 6.7,
+          "vi": 18.3
+        }
+      },
+      "sentences": [
+        {
+          "sentence": "안녕하세요, 오늘 어떻게 지내세요?",
+          "audio_sec": 5.7,
+          "stt_hyp": "이 큰 형이세요. 이 이 손 네가 나서 닥치 치시르세요.",
+          "stt_lang_detected": "Korean",
+          "stt_error": 1.2632,
+          "stt_rtfx": 3.79,
+          "mt": {
+            "en": "Vous êtes ce grand frère. Avec cette main, toi, tais-toi et arrête.",
+            "zh": "你就是那个大哥哥吧。这张嘴，你给我闭嘴吧。",
+            "vi": "Bạn chính là anh trai lớn này à? Hãy dùng đôi tay này của mình để im lặng đi."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0387,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_000_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0457,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_000_zh.wav"
+            },
+            "vi": {
+              "rtf": 0.0461,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_000_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.873,
+            "stt": 1.504,
+            "mt_load": 2.445,
+            "mt_total": 2.374,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.422,
+              "zh": 0.448,
+              "vi": 0.417
+            },
+            "tts_total": 1.288,
+            "total": 5.166
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 0.0,
+            "vi": 0.0
+          }
+        },
+        {
+          "sentence": "오늘 아침 날씨가 정말 좋아요.",
+          "audio_sec": 5.06,
+          "stt_hyp": "이 페트로브 대도 내 자리에 휴지에 매일 인제 살이 정말 휴지오 휴오.",
+          "stt_lang_detected": "Korean",
+          "stt_error": 1.8824,
+          "stt_rtfx": 6.16,
+          "mt": {
+            "en": "Sur cette grande surface Petrov, à ma place, il y a du papier toilette tous les jours ; maintenant, c’est vraiment du papier toilette, ouah.",
+            "zh": "在这个佩特罗夫大岛上，我的位置上每天都有纸巾，现在真的变得像纸巾一样了，唉。",
+            "vi": "Trong khu vực Petrov này, chỗ của tôi luôn có giấy ăn; mỗi ngày da tôi cứ như bị giấy ăn bao phủ vậy."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0449,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_001_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0454,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_001_zh.wav"
+            },
+            "vi": {
+              "rtf": 0.0427,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_001_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.873,
+            "stt": 0.822,
+            "mt_load": 2.445,
+            "mt_total": 3.546,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.641,
+              "zh": 0.546,
+              "vi": 0.441
+            },
+            "tts_total": 1.628,
+            "total": 5.996
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 0.0,
+            "vi": 0.0
+          }
+        },
+        {
+          "sentence": "필요한 물건을 사러 가게에 가야 해요.",
+          "audio_sec": 6.7,
+          "stt_hyp": "접시를 손으로 한 줄자에 한 줄자에 도착했으니 걔 피었기 때문이오.",
+          "stt_lang_detected": "Korean",
+          "stt_error": 1.4286,
+          "stt_rtfx": 8.79,
+          "mt": {
+            "en": "The plate reached one ruler length with the hand, and that’s because it bloomed.",
+            "zh": "盘子用手指量了一下，已经达到一尺的长度了，那是因为它已经长开了。",
+            "vi": "Đĩa đã đến vị trí một thước bằng tay, vì nó đã nở rồi."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.039,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_002_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0406,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_002_zh.wav"
+            },
+            "vi": {
+              "rtf": 0.04,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_002_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.873,
+            "stt": 0.762,
+            "mt_load": 2.445,
+            "mt_total": 2.309,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.382,
+              "zh": 0.476,
+              "vi": 0.338
+            },
+            "tts_total": 1.197,
+            "total": 4.268
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 0.0,
+            "vi": 25.0
+          }
+        },
+        {
+          "sentence": "이 문제를 해결하는 데 도움을 주시겠어요?",
+          "audio_sec": 8.74,
+          "stt_hyp": "태르 심을 존재를 은한 연히 그저 저의 심으로 외가해 태태제 디브로 문제의 수시를 저요사.",
+          "stt_lang_detected": "Korean",
+          "stt_error": 1.7826,
+          "stt_rtfx": 8.94,
+          "mt": {
+            "en": "The existence of tar hearts has always been, simply, within my own heart; I deal with the issues related to Taiteji Divro on my own.",
+            "zh": "塔尔芯的存在向来只是以我的心灵来外化表达，至于泰泰制与迪布罗的问题，那就由我来处理吧。",
+            "vi": "Sự tồn tại của Tar Shim, một cách kín đáo, chỉ là trong trái tim tôi thôi; tôi tự mình giải quyết những vấn đề liên quan đến Taiteji Divro."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0408,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_003_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0492,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_003_zh.wav"
+            },
+            "vi": {
+              "rtf": 0.0488,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_003_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.873,
+            "stt": 0.978,
+            "mt_load": 2.445,
+            "mt_total": 3.9,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.545,
+              "zh": 0.629,
+              "vi": 0.565
+            },
+            "tts_total": 1.739,
+            "total": 6.617
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 33.3,
+            "vi": 66.7
+          }
+        },
+        {
+          "sentence": "회의가 내일 오후로 변경되었습니다.",
+          "audio_sec": 5.96,
+          "stt_hyp": "대세로 행한 내시요새 희보수로 해태산에 장대배엽 찾는 일을 했어요.",
+          "stt_lang_detected": "Korean",
+          "stt_error": 1.6316,
+          "stt_rtfx": 7.82,
+          "mt": {
+            "en": "As a trendsetter, I worked at the eunuch fortress in Hibosu to search for long-leaved plants on Mount Haetae.",
+            "zh": "作为大势所趋，内侍们前往海泰山，用希宝水寻找长叶。",
+            "vi": "Tôi đã thực hiện công việc tìm kiếm lá cây dài trên núi Hae태, như một phần của dự án lớn."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0433,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_004_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0428,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_004_zh.wav"
+            },
+            "vi": {
+              "rtf": 0.039,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_ko_004_vi.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 14.873,
+            "stt": 0.762,
+            "mt_load": 2.445,
+            "mt_total": 3.061,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.479,
+              "zh": 0.445,
+              "vi": 0.441
+            },
+            "tts_total": 1.365,
+            "total": 5.188
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 0.0,
+            "vi": 0.0
+          }
+        }
+      ]
+    },
+    "vi": {
+      "summary": {
+        "lang": "vi",
+        "n_sentences": 5,
+        "stt_avg_s": 0.541,
+        "stt_median_s": 0.346,
+        "stt_avg_rtfx": 4.71,
+        "mt_avg_s": 1.204,
+        "tts_avg_s": 1.338,
+        "wall_avg_s": 3.083,
+        "stt_avg_error": 0.1301,
+        "kw_avg": 81.1,
+        "stt_model_loads": [
+          13.016
+        ],
+        "mt_model_loads": [
+          3.124
+        ],
+        "stt_loads_total_s": 13.02,
+        "mt_loads_total_s": 3.12,
+        "stt_avg_error_pct": 13.01,
+        "kw_per_target": {
+          "en": 63.3,
+          "zh": 93.3,
+          "ko": 86.7
+        }
+      },
+      "sentences": [
+        {
+          "sentence": "Xin chào, hôm nay bạn thế nào?",
+          "audio_sec": 1.77,
+          "stt_hyp": "xin chào, hôm nay bạn thế nào?",
+          "stt_lang_detected": "Vietnamese",
+          "stt_error": 0.1429,
+          "stt_rtfx": 1.34,
+          "mt": {
+            "en": "Hello, how are you today?",
+            "zh": "你好，你今天怎么样？",
+            "ko": "안녕하세요, 오늘 기분은 어때요?"
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0453,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_000_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0462,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_000_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0436,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_000_ko.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.016,
+            "stt": 1.32,
+            "mt_load": 3.124,
+            "mt_total": 1.162,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.371,
+              "zh": 0.329,
+              "ko": 0.691
+            },
+            "tts_total": 1.391,
+            "total": 3.873
+          },
+          "keyword_accuracy": {
+            "en": 75.0,
+            "zh": 100.0,
+            "ko": 66.7
+          }
+        },
+        {
+          "sentence": "Thời tiết hôm nay thật đẹp.",
+          "audio_sec": 1.38,
+          "stt_hyp": "thời tiết hôm nay thật đẹp.",
+          "stt_lang_detected": "Vietnamese",
+          "stt_error": 0.1667,
+          "stt_rtfx": 4.55,
+          "mt": {
+            "en": "The weather is really nice today.",
+            "zh": "今天的天气真好。",
+            "ko": "오늘 날씨가 정말 좋아요."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0422,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_001_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0468,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_001_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0425,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_001_ko.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.016,
+            "stt": 0.304,
+            "mt_load": 3.124,
+            "mt_total": 0.968,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.317,
+              "zh": 0.318,
+              "ko": 0.529
+            },
+            "tts_total": 1.164,
+            "total": 2.436
+          },
+          "keyword_accuracy": {
+            "en": 66.7,
+            "zh": 100.0,
+            "ko": 100.0
+          }
+        },
+        {
+          "sentence": "Tôi cần đi cửa hàng mua vài thứ.",
+          "audio_sec": 1.94,
+          "stt_hyp": "tôi cần đi cửa hàng mua vài thứ.",
+          "stt_lang_detected": "Vietnamese",
+          "stt_error": 0.125,
+          "stt_rtfx": 5.61,
+          "mt": {
+            "en": "I need to go to the store to buy a few things.",
+            "zh": "我需要去商店买几样东西。",
+            "ko": "저는 가게에 가서 몇 가지 물건을 사야 해요."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0443,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_002_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0445,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_002_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0393,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_002_ko.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.016,
+            "stt": 0.346,
+            "mt_load": 3.124,
+            "mt_total": 1.47,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.354,
+              "zh": 0.33,
+              "ko": 0.658
+            },
+            "tts_total": 1.342,
+            "total": 3.158
+          },
+          "keyword_accuracy": {
+            "en": 100.0,
+            "zh": 100.0,
+            "ko": 66.7
+          }
+        },
+        {
+          "sentence": "Bạn có thể giúp tôi giải quyết vấn đề này không?",
+          "audio_sec": 2.49,
+          "stt_hyp": "bạn có thể giúp tôi giải quyết vấn đề này không?",
+          "stt_lang_detected": "Vietnamese",
+          "stt_error": 0.0909,
+          "stt_rtfx": 6.19,
+          "mt": {
+            "en": "Could you help me solve this problem?",
+            "zh": "你能帮我解决这个问题吗？",
+            "ko": "제가 이 문제를 해결하는 데 도와주실 수 있나요?"
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0424,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_003_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0464,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_003_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.04,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_003_ko.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.016,
+            "stt": 0.402,
+            "mt_load": 3.124,
+            "mt_total": 1.212,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.318,
+              "zh": 0.337,
+              "ko": 0.75
+            },
+            "tts_total": 1.406,
+            "total": 3.02
+          },
+          "keyword_accuracy": {
+            "en": 75.0,
+            "zh": 66.7,
+            "ko": 100.0
+          }
+        },
+        {
+          "sentence": "Cuộc họp đã được đổi sang chiều mai.",
+          "audio_sec": 1.94,
+          "stt_hyp": "cuộc họp đã được đổi sang chiều mai.",
+          "stt_lang_detected": "Vietnamese",
+          "stt_error": 0.125,
+          "stt_rtfx": 5.85,
+          "mt": {
+            "en": "La réunion a été reportée à demain après-midi.",
+            "zh": "会议已改到明天下午举行。",
+            "ko": "회의가 내일 오후로 변경되었습니다."
+          },
+          "tts": {
+            "en": {
+              "rtf": 0.0462,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_004_en.wav"
+            },
+            "zh": {
+              "rtf": 0.0428,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_004_zh.wav"
+            },
+            "ko": {
+              "rtf": 0.0403,
+              "file": "/home/albert/AI-Translator/translator/pipeline_outputs/test_vi_004_ko.wav"
+            }
+          },
+          "timings": {
+            "stt_load": 13.016,
+            "stt": 0.332,
+            "mt_load": 3.124,
+            "mt_total": 1.208,
+            "mt_per_target": {},
+            "tts": {
+              "en": 0.374,
+              "zh": 0.345,
+              "ko": 0.669
+            },
+            "tts_total": 1.388,
+            "total": 2.928
+          },
+          "keyword_accuracy": {
+            "en": 0.0,
+            "zh": 100.0,
+            "ko": 100.0
+          }
+        }
+      ]
+    }
+  },
+  "overall": {
+    "stt_avg_s": 0.633,
+    "mt_avg_s": 1.818,
+    "tts_avg_s": 1.397,
+    "wall_avg_s": 3.848,
+    "stt_avg_error": 0.4486,
+    "kw_avg": 63.4
+  }
+}
